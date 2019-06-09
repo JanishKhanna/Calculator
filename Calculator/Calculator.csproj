@@ -56,7 +56,43 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="FileSizeConversion.xaml.cs">
+      <DependentUpon>FileSizeConversion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="IntegerConversion.xaml.cs">
+      <DependentUpon>IntegerConversion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LengthConversion.xaml.cs">
+      <DependentUpon>LengthConversion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.xaml.cs">
+      <DependentUpon>Menu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PercentageConversion.xaml.cs">
+      <DependentUpon>PercentageConversion.xaml</DependentUpon>
+    </Compile>
     <Compile Include="StringExtension.cs" />
+    <Compile Include="TemperatureConversion.xaml.cs">
+      <DependentUpon>TemperatureConversion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TimeConversion.xaml.cs">
+      <DependentUpon>TimeConversion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WeightConversion.xaml.cs">
+      <DependentUpon>WeightConversion.xaml</DependentUpon>
+    </Compile>
+    <Page Include="FileSizeConversion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="IntegerConversion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LengthConversion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -69,6 +105,26 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Menu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PercentageConversion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TemperatureConversion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TimeConversion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WeightConversion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

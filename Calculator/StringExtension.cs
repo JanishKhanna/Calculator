@@ -10,7 +10,7 @@ namespace Calculator
 {
     public static class StringExtension
     {
-        public static (int? i, decimal? d) Calculate(this string str)
+        public static (int? i, decimal? d, double? dbl) Calculate(this string str)
         {
             DataTable dataTable = new DataTable();
             object result;
@@ -23,13 +23,14 @@ namespace Calculator
             {
                 MessageBox.Show("Something Went Wrong");
 
-                return (null, null);
+                return (null, null, null);
             }
 
             int? output1 = result as int?;
             decimal? output2 = result as decimal?;
+            double? output3 = result as double?;
 
-            return (output1, output2);
+            return (output1, output2, output3);
         }        
     }
 }

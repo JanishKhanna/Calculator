@@ -27,6 +27,12 @@ namespace Calculator
 
         private void Btn_Equals_To(object sender, RoutedEventArgs e)
         {
+            if (Box.Content == null)
+            {
+                MessageBox.Show("Something Went Wrong");
+                return;
+            }
+
             var display = "";
             var input = Box.Content.ToString();
             string[] myArr = input.Split('^');            
@@ -52,27 +58,31 @@ namespace Calculator
                 return;
             }
 
-            (int? output1, decimal? output2) = Box.Content.ToString().Calculate();
+            (int? output1, decimal? output2, double? output3) = Box.Content.ToString().Calculate();
 
             
-            if (!output1.HasValue && !output2.HasValue)
+            if (!output1.HasValue && !output2.HasValue && !output3.HasValue)
             {
                 MessageBox.Show("Something Went Wrong");
             }
-            else if(output1.HasValue && !output2.HasValue)
+            else if(output1.HasValue && !output2.HasValue && !output3.HasValue)
             {
                 display = output1.ToString();                
             }
-            else if(!output1.HasValue && output2.HasValue)
+            else if(!output1.HasValue && output2.HasValue && !output3.HasValue)
             {
                 display = output2.ToString();
-            }            
+            }  
+            else if(!output1.HasValue && !output2.HasValue && output3.HasValue)
+            {
+                display = output3.ToString();
+            }
             else
             {
                 MessageBox.Show("An Unexpected Error Occured");
             }
 
-            Box.Content = display;
+            Box.Content = display;            
         }
         
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -157,7 +167,8 @@ namespace Calculator
 
         private void Btn_Delete_One(object sender, RoutedEventArgs e)
         {
-
+            var input = Box.Content.ToString();
+            var indexOfInput = input.Length - 1;
         }
 
         private void Btn_Exponent(object sender, RoutedEventArgs e)
@@ -167,6 +178,12 @@ namespace Calculator
 
         private void Btn_SqRoot(object sender, RoutedEventArgs e)
         {
+            if (Box.Content == null)
+            {
+                MessageBox.Show("Something Went Wrong");
+                return;
+            }
+
             var value = Box.Content.ToString();
             decimal toDecimal = decimal.Parse(value);
             double result = (double)toDecimal;            
@@ -176,6 +193,12 @@ namespace Calculator
 
         private void Btn_Factorial(object sender, RoutedEventArgs e)
         {
+            if(Box.Content == null)
+            {
+                MessageBox.Show("Something Went Wrong");
+                return;
+            }
+
             var input = Box.Content.ToString();
             double value = double.Parse(input);
             
@@ -196,6 +219,13 @@ namespace Calculator
         private void Btn_Decimal(object sender, RoutedEventArgs e)
         {
             Box.Content += ".";
+        }
+
+        private void Btn_Menu(object sender, RoutedEventArgs e)
+        {
+            var menu = new Menu(this);
+            menu.Activate();
+            menu.Show();            
         }
     }
 }
