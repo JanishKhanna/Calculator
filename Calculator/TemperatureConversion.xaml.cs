@@ -35,21 +35,36 @@ namespace Calculator
         private void Btn_Reset(object sender, RoutedEventArgs e)
         {
             Celsius.Text = "";
-            Fahrenheit.Text = "";            
+            Fahrenheit.Text = "";
         }
 
         private void Btn_Submit(object sender, RoutedEventArgs e)
         {
             if (Celsius.Text != "")
             {
-                double fahrenheitOperation = (Convert.ToDouble(Celsius.Text) * 9 / 5) + 32;
-                Fahrenheit.Text = fahrenheitOperation.ToString();                
+                if (double.TryParse(Celsius.Text, out double toDouble))
+                {
+                    double fahrenheitOperation = ((toDouble) * 9 / 5) + 32;
+                    Fahrenheit.Text = fahrenheitOperation.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("You must put a Number");
+                }
+
             }
             else if (Fahrenheit.Text != "")
             {
-                double celsiusOperation = (Convert.ToDouble(Fahrenheit.Text) - 32) * 5 / 9;
-                Celsius.Text = celsiusOperation.ToString();                
-            }            
+                if (double.TryParse(Fahrenheit.Text, out double toDouble))
+                {
+                    double celsiusOperation = ((toDouble) - 32) * 5 / 9;
+                    Celsius.Text = celsiusOperation.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("You must put a Number");
+                }
+            }
         }
     }
 }

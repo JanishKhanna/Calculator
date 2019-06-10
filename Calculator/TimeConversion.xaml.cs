@@ -41,29 +41,36 @@ namespace Calculator
 
         private void Btn_Submit(object sender, RoutedEventArgs e)
         {
-            if (Sec.Text != "")
+            try
             {
-                var minuteOperation = Convert.ToDecimal(Sec.Text) / 60;
-                Min.Text = minuteOperation.ToString();
+                if (Sec.Text != "")
+                {
+                    var minuteOperation = Convert.ToDecimal(Sec.Text) / 60;
+                    Min.Text = minuteOperation.ToString();
 
-                var hourOperation = Convert.ToDecimal(Sec.Text) / 3600;
-                Hrs.Text = hourOperation.ToString();
+                    var hourOperation = Convert.ToDecimal(Sec.Text) / 3600;
+                    Hrs.Text = hourOperation.ToString();
+                }
+                else if (Min.Text != "")
+                {
+                    var secondOperation = Convert.ToDecimal(Min.Text) * 60;
+                    Sec.Text = secondOperation.ToString();
+
+                    var hourOperation = Convert.ToDecimal(Min.Text) / 60;
+                    Hrs.Text = hourOperation.ToString();
+                }
+                else if (Hrs.Text != "")
+                {
+                    var secondOperation = Convert.ToDecimal(Hrs.Text) * 3600;
+                    Sec.Text = secondOperation.ToString();
+
+                    var minuteOperation = Convert.ToDecimal(Hrs.Text) * 60;
+                    Min.Text = minuteOperation.ToString();
+                }
             }
-            else if (Min.Text != "")
+            catch (FormatException)
             {
-                var secondOperation = Convert.ToDecimal(Min.Text) * 60;
-                Sec.Text = secondOperation.ToString();
-
-                var hourOperation = Convert.ToDecimal(Min.Text) / 60;
-                Hrs.Text = hourOperation.ToString();
-            }
-            else if (Hrs.Text != "")
-            {
-                var secondOperation = Convert.ToDecimal(Hrs.Text) * 3600;
-                Sec.Text = secondOperation.ToString();
-
-                var minuteOperation = Convert.ToDecimal(Hrs.Text) * 60;
-                Min.Text = minuteOperation.ToString();
+                MessageBox.Show("You must put a Number");
             }
         }
     }

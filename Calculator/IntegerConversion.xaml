@@ -5,8 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculator"
         mc:Ignorable="d"
-        Title="IntegerConversion" Height="450" Width="800">
+        Title="IntegerConversion" Height="500" Width="400">
     <Grid>
-        
+        <TextBox x:Name="Binary" HorizontalAlignment="Left" Height="42" Margin="198,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Octal" HorizontalAlignment="Left" Height="42" Margin="198,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Hexadecimal" HorizontalAlignment="Left" Height="42" Margin="198,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Integer" HorizontalAlignment="Left" Height="42" Margin="198,269,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Integer Conversions" FontSize="25" HorizontalAlignment="Left" Margin="74,61,0,0" VerticalAlignment="Top" Width="250" Height="49"/>
+        <Label FontSize="15" Content="Binary" HorizontalAlignment="Left" Margin="58,128,0,0" VerticalAlignment="Top" Height="42" Width="101"/>
+        <Label FontSize="15" Content="Octal" HorizontalAlignment="Left" Margin="58,175,0,0" VerticalAlignment="Top" Width="101" Height="42"/>
+        <Label FontSize="15" Content="Hexadecimal" HorizontalAlignment="Left" Margin="58,222,0,0" VerticalAlignment="Top" Width="101" Height="42"/>
+        <Label FontSize="15" Content="Integer" HorizontalAlignment="Left" Margin="58,269,0,0" VerticalAlignment="Top" Height="42" Width="101"/>
+        <Button Content="Menu" FontSize="25" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" Width="67" Height="51" Background="Blue" Click="Btn_Menu" RenderTransformOrigin="0.506,1.343"/>
+        <Button FontSize="18" Content="Submit" HorizontalAlignment="Left" Margin="198,354,0,0" Width="75" Height="30" VerticalAlignment="Top" Click="Btn_Submit" RenderTransformOrigin="0.436,1.979"/>
+        <Button FontSize="18" Content="Reset" HorizontalAlignment="Left" Width="75" Margin="198,401,0,0" Height="30" VerticalAlignment="Top" Click="Btn_Reset"/>
     </Grid>
 </Window>

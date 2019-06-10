@@ -168,15 +168,9 @@ namespace Calculator
 
         private void Btn_Delete_One(object sender, RoutedEventArgs e)
         {
-            if (Box.Content == null)
-            {
-                MessageBox.Show("Something Went Wrong");
-                return;
-            }
+            var box = Box.Content?.ToString();
 
-            var box = Box.Content.ToString();
-
-            if (box != "")
+            if (!string.IsNullOrEmpty(box))
             {
                 Box.Content = box.Substring(0, box.Length - 1);
             }

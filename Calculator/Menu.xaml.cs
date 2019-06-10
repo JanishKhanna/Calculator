@@ -65,5 +65,19 @@ namespace Calculator
             tempWindow.Activate();
             tempWindow.Show();
         }
+
+        private void Btn_Integer(object sender, RoutedEventArgs e)
+        {
+            var integerWindow = new IntegerConversion();
+            integerWindow.Activate();
+            integerWindow.Show();
+        }
+
+        private void Btn_Percent(object sender, RoutedEventArgs e)
+        {
+            var percentWindow = new PercentageConversion();
+            percentWindow.Activate();
+            percentWindow.Show();
+        }
     }
 }

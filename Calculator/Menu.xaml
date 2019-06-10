@@ -13,5 +13,7 @@
         <Button FontSize="20" Content="Length Conversion" HorizontalAlignment="Left" Margin="10,142,0,0" VerticalAlignment="Top" Width="230" Height="35" Click="Btn_Length"/>
         <Button FontSize="20" Content="Weight Conversion" HorizontalAlignment="Left" Margin="10,182,0,0" VerticalAlignment="Top" Width="230" Height="35" Click="Btn_Weight"/>
         <Button FontSize="20" Content="Time Conversion" HorizontalAlignment="Left" Margin="10,222,0,0" VerticalAlignment="Top" Width="230" Height="35" Click="Btn_Time"/>
+        <Button FontSize="20" Content="Integer Conversion" HorizontalAlignment="Left" Margin="10,262,0,0" VerticalAlignment="Top" Width="230" Height="35" Click="Btn_Integer"/>
+        <Button FontSize="20" Content="Percent Conversion" HorizontalAlignment="Left" Margin="10,302,0,0" VerticalAlignment="Top" Width="230" Height="35" Click="Btn_Percent"/>
     </Grid>
 </Window>

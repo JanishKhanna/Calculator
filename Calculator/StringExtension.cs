@@ -21,8 +21,6 @@ namespace Calculator
             }
             catch
             {
-                MessageBox.Show("Something Went Wrong");
-
                 return (null, null, null);
             }
 
@@ -31,6 +29,6 @@ namespace Calculator
             double? output3 = result as double?;
 
             return (output1, output2, output3);
-        }        
+        }
     }
 }
