@@ -35,14 +35,13 @@
         <Button Content="+" FontSize="40" HorizontalAlignment="Left" Margin="446,351,0,0" VerticalAlignment="Top" Width="100" Height="60" Background="#FFEED221" Click="Btn_Add"/>
         <Button Content="*" FontSize="40" HorizontalAlignment="Left" Margin="446,230,0,0" VerticalAlignment="Top" Width="100" Height="61" Background="#FFE8CA0E" Click="Btn_Multiply"/>
         <Button Content="/" FontSize="40" HorizontalAlignment="Left" Margin="446,171,0,0" VerticalAlignment="Top" Width="100" Height="59" Background="#FFE4C816" Click="Btn_Divide"/>
-        <Button Content="AC" FontSize="40"  HorizontalAlignment="Left" Margin="146,171,0,0" VerticalAlignment="Top" Width="200" Height="60" Background="#FF09C571" Click="Button_Click_ClearAll"/>
-        <Button Content="+/-" FontSize="40" HorizontalAlignment="Left" Margin="146,411,0,0" VerticalAlignment="Top" Width="100" Height="60" Background="#FFB9B5B5"/>
-        <Button Content="del" FontSize="40" HorizontalAlignment="Left" Margin="346,171,0,0" VerticalAlignment="Top" Width="100" Height="59" Background="#FFB9B5B5" Click="Btn_Delete_One"/>
+        <Button Content="AC" FontSize="40"  HorizontalAlignment="Left" Margin="46,171,0,0" VerticalAlignment="Top" Width="200" Height="60" Background="#FF09C571" Click="Button_Click_ClearAll"/>
+        <Button Content="del" FontSize="40" HorizontalAlignment="Left" Margin="246,171,0,0" VerticalAlignment="Top" Width="200" Height="59" Background="#FFB9B5B5" Click="Btn_Delete_One"/>
         <Button Content="%" FontSize="40" HorizontalAlignment="Left" Margin="46,411,0,0" VerticalAlignment="Top" Width="100" Height="60" Background="#FFB9B5B5" Click="Btn_Modulas"/>
         <Button Content="√" FontSize="40" HorizontalAlignment="Left" Margin="46,230,0,0" VerticalAlignment="Top" Width="100" Height="61" Background="#FFB9B5B5" Click="Btn_SqRoot"/>
         <Button Content="xⁿ" FontSize="40" HorizontalAlignment="Left" Margin="46,291,0,0" VerticalAlignment="Top" Width="100" Height="60" Background="#FFB9B5B5" Click="Btn_Exponent"/>
         <Button Content="x!" FontSize="40" HorizontalAlignment="Left" Margin="46,351,0,0" VerticalAlignment="Top" Width="100" Height="60" Background="#FFB9B5B5" Click="Btn_Factorial"/>
-        <Button Content="OFF" FontSize="40" HorizontalAlignment="Left" Margin="46,171,0,0" VerticalAlignment="Top" Width="100" Height="59" Background="Red" Click="Button_Click_Off"/>
+        <Button Content="OFF" FontSize="40" HorizontalAlignment="Left" Margin="146,412,0,0" VerticalAlignment="Top" Width="100" Height="59" Background="Red" Click="Button_Click_Off"/>
         <Label x:Name="Box" FontSize="20" HorizontalAlignment="Left" Margin="46,87,0,0" VerticalAlignment="Top" Width="500" Height="79" BorderBrush="Black" BorderThickness="2"/>
         <Button Content="Menu" FontSize="25" HorizontalAlignment="Left" Margin="46,9,0,0" VerticalAlignment="Top" Width="72" Height="56" Background="Blue" Click="Btn_Menu" RenderTransformOrigin="0.506,1.343"/>
     </Grid>

@@ -35,12 +35,12 @@ namespace Calculator
 
             var display = "";
             var input = Box.Content.ToString();
-            string[] myArr = input.Split('^');            
+            string[] myArr = input.Split('^');
 
-            if(myArr.Length == 2)
+            if (myArr.Length == 2)
             {
-                if (double.TryParse(myArr[0], out double num1 ) && double.TryParse(myArr[1], out double num2))
-                {                    
+                if (double.TryParse(myArr[0], out double num1) && double.TryParse(myArr[1], out double num2))
+                {
                     double output = 1;
 
                     for (double i = 1; i <= num2; i++)
@@ -48,7 +48,7 @@ namespace Calculator
                         output = num1 * output;
                     }
 
-                    Box.Content = output;                    
+                    Box.Content = output;
                 }
                 else
                 {
@@ -60,34 +60,35 @@ namespace Calculator
 
             (int? output1, decimal? output2, double? output3) = Box.Content.ToString().Calculate();
 
-            
             if (!output1.HasValue && !output2.HasValue && !output3.HasValue)
             {
                 MessageBox.Show("Something Went Wrong");
+                return;
             }
-            else if(output1.HasValue && !output2.HasValue && !output3.HasValue)
+            else if (output1.HasValue && !output2.HasValue && !output3.HasValue)
             {
-                display = output1.ToString();                
+                display = output1.ToString();
             }
-            else if(!output1.HasValue && output2.HasValue && !output3.HasValue)
+            else if (!output1.HasValue && output2.HasValue && !output3.HasValue)
             {
                 display = output2.ToString();
-            }  
-            else if(!output1.HasValue && !output2.HasValue && output3.HasValue)
+            }
+            else if (!output1.HasValue && !output2.HasValue && output3.HasValue)
             {
                 display = output3.ToString();
             }
             else
             {
                 MessageBox.Show("An Unexpected Error Occured");
+                return;
             }
 
-            Box.Content = display;            
+            Box.Content = display;
         }
-        
+
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            Box.Content += "1";            
+            Box.Content += "1";
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
@@ -128,7 +129,7 @@ namespace Calculator
         private void Button_Click_9(object sender, RoutedEventArgs e)
         {
             Box.Content += "9";
-        }      
+        }
 
         private void Btn_Add(object sender, RoutedEventArgs e)
         {
@@ -161,14 +162,24 @@ namespace Calculator
         }
 
         private void Button_Click_ClearAll(object sender, RoutedEventArgs e)
-        {            
+        {
             Box.Content = "";
         }
 
         private void Btn_Delete_One(object sender, RoutedEventArgs e)
         {
-            var input = Box.Content.ToString();
-            var indexOfInput = input.Length - 1;
+            if (Box.Content == null)
+            {
+                MessageBox.Show("Something Went Wrong");
+                return;
+            }
+
+            var box = Box.Content.ToString();
+
+            if (box != "")
+            {
+                Box.Content = box.Substring(0, box.Length - 1);
+            }
         }
 
         private void Btn_Exponent(object sender, RoutedEventArgs e)
@@ -186,14 +197,14 @@ namespace Calculator
 
             var value = Box.Content.ToString();
             decimal toDecimal = decimal.Parse(value);
-            double result = (double)toDecimal;            
+            double result = (double)toDecimal;
             var output = Math.Sqrt(result);
             Box.Content = output;
         }
 
         private void Btn_Factorial(object sender, RoutedEventArgs e)
         {
-            if(Box.Content == null)
+            if (Box.Content == null)
             {
                 MessageBox.Show("Something Went Wrong");
                 return;
@@ -201,9 +212,9 @@ namespace Calculator
 
             var input = Box.Content.ToString();
             double value = double.Parse(input);
-            
 
-            for(double i = value - 1; i >= 1; i--)
+
+            for (double i = value - 1; i >= 1; i--)
             {
                 value = value * i;
             }
@@ -225,7 +236,7 @@ namespace Calculator
         {
             var menu = new Menu(this);
             menu.Activate();
-            menu.Show();            
+            menu.Show();
         }
     }
 }

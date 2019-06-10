@@ -8,13 +8,10 @@
         Title="Menu" Height="450" Width="400">
     <Grid>
         <Button FontSize="20" Content="Standard Calculator" HorizontalAlignment="Left" Margin="10,22,0,0" VerticalAlignment="Top" Width="230" Height="35" Click="Btn_Main"/>
-        <Button FontSize="20" Content="Integer Conversion" HorizontalAlignment="Left" Margin="10,62,0,0" VerticalAlignment="Top" Width="230" Height="36"/>
-        <Button FontSize="20" Content="Percentage Conversion" HorizontalAlignment="Left" Margin="10,103,0,0" VerticalAlignment="Top" Width="230" Height="35"/>
-        <Button FontSize="20" Content="File Size Conversion" HorizontalAlignment="Left" Margin="10,143,0,0" VerticalAlignment="Top" Width="230" Height="35" RenderTransformOrigin="0.499,-0.634" Click="Btn_File"/>
-        <Button FontSize="20" Content="Temperature Conversion" HorizontalAlignment="Left" Margin="10,183,0,0" VerticalAlignment="Top" Width="230" Height="35" Click="Btn_Temperature"/>
-        <Button FontSize="20" Content="Length Conversion" HorizontalAlignment="Left" Margin="10,223,0,0" VerticalAlignment="Top" Width="230" Height="35" Click="Btn_Length"/>
-        <Button FontSize="20" Content="Weight Conversion" HorizontalAlignment="Left" Margin="10,263,0,0" VerticalAlignment="Top" Width="230" Height="35" Click="Btn_Weight"/>
-        <Button FontSize="20" Content="Time Conversion" HorizontalAlignment="Left" Margin="10,303,0,0" VerticalAlignment="Top" Width="230" Height="35" Click="Btn_Time"/>
-
+        <Button FontSize="20" Content="File Size Conversion" HorizontalAlignment="Left" Margin="10,62,0,0" VerticalAlignment="Top" Width="230" Height="35" RenderTransformOrigin="0.499,-0.634" Click="Btn_File"/>
+        <Button FontSize="20" Content="Temperature Conversion" HorizontalAlignment="Left" Margin="10,102,0,0" VerticalAlignment="Top" Width="230" Height="35" Click="Btn_Temperature"/>
+        <Button FontSize="20" Content="Length Conversion" HorizontalAlignment="Left" Margin="10,142,0,0" VerticalAlignment="Top" Width="230" Height="35" Click="Btn_Length"/>
+        <Button FontSize="20" Content="Weight Conversion" HorizontalAlignment="Left" Margin="10,182,0,0" VerticalAlignment="Top" Width="230" Height="35" Click="Btn_Weight"/>
+        <Button FontSize="20" Content="Time Conversion" HorizontalAlignment="Left" Margin="10,222,0,0" VerticalAlignment="Top" Width="230" Height="35" Click="Btn_Time"/>
     </Grid>
 </Window>
