@@ -23,5 +23,33 @@ namespace Calculator
         {
             InitializeComponent();
         }
+
+        private void Btn_Menu(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = App.Current.MainWindow as MainWindow;
+            var menu = new Menu(mainWindow);
+            menu.Activate();
+            menu.Show();
+        }
+
+        private void Btn_Reset(object sender, RoutedEventArgs e)
+        {
+            Celsius.Text = "";
+            Fahrenheit.Text = "";            
+        }
+
+        private void Btn_Submit(object sender, RoutedEventArgs e)
+        {
+            if (Celsius.Text != "")
+            {
+                double fahrenheitOperation = (Convert.ToDouble(Celsius.Text) * 9 / 5) + 32;
+                Fahrenheit.Text = fahrenheitOperation.ToString();                
+            }
+            else if (Fahrenheit.Text != "")
+            {
+                double celsiusOperation = (Convert.ToDouble(Fahrenheit.Text) - 32) * 5 / 9;
+                Celsius.Text = celsiusOperation.ToString();                
+            }            
+        }
     }
 }

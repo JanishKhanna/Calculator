@@ -5,8 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculator"
         mc:Ignorable="d"
-        Title="LenghtConversion" Height="450" Width="800">
+        Title="LenghtConversion" Height="580" Width="400">
     <Grid>
-        
+        <TextBox x:Name="Mm" HorizontalAlignment="Left" Height="35" Margin="175,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Cm" HorizontalAlignment="Left" Height="35" Margin="175,169,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Meter" HorizontalAlignment="Left" Height="35" Margin="175,209,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Km" HorizontalAlignment="Left" Height="35" Margin="175,249,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Inches" HorizontalAlignment="Left" Height="35" Margin="175,289,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.511,1.52"/>
+        <TextBox x:Name="Feet" HorizontalAlignment="Left" Height="35" Margin="175,329,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Length Conversions" FontSize="25" HorizontalAlignment="Left" Margin="74,61,0,0" VerticalAlignment="Top" Width="236" Height="49"/>
+        <Label FontSize="15" Content="Millimeters" HorizontalAlignment="Left" Margin="58,129,0,0" VerticalAlignment="Top" Height="35" Width="87"/>
+        <Label FontSize="15" Content="Centimeters" HorizontalAlignment="Left" Margin="58,169,0,0" VerticalAlignment="Top" Width="87" Height="35"/>
+        <Label FontSize="15" Content="Meters" HorizontalAlignment="Left" Margin="58,209,0,0" VerticalAlignment="Top" Width="87" Height="35"/>
+        <Label FontSize="15" Content="Kilometers" HorizontalAlignment="Left" Margin="58,249,0,0" VerticalAlignment="Top" Width="87" Height="35"/>
+        <Label FontSize="15" Content="Inches" HorizontalAlignment="Left" Margin="58,289,0,0" VerticalAlignment="Top" Width="87" Height="35"/>
+        <Label FontSize="15" Content="Feet" HorizontalAlignment="Left" Margin="58,329,0,0" VerticalAlignment="Top" Width="87" Height="35"/>
+        <Button Content="Menu" FontSize="25" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" Width="67" Height="51" Background="Blue" Click="Btn_Menu" RenderTransformOrigin="0.506,1.343"/>
+        <Button FontSize="18" Content="Submit" HorizontalAlignment="Left" Margin="198,400,0,0" Width="75" Height="30" VerticalAlignment="Top" Click="Btn_Submit"/>
+        <Button FontSize="18" Content="Reset" HorizontalAlignment="Left" Width="75" Margin="198,435,0,0" Height="30" VerticalAlignment="Top" Click="Btn_Reset"/>
     </Grid>
 </Window>

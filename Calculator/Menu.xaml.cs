@@ -58,5 +58,12 @@ namespace Calculator
             fileWindow.Activate();
             fileWindow.Show();
         }
+
+        private void Btn_Temperature(object sender, RoutedEventArgs e)
+        {
+            var tempWindow = new TemperatureConversion();
+            tempWindow.Activate();
+            tempWindow.Show();
+        }
     }
 }
